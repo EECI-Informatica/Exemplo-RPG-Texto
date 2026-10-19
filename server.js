@@ -8,6 +8,10 @@ const session = require('express-session');
 const mysql = require('mysql2/promise');
 
 const app = express();
+// Render termina HTTPS no proxy e encaminha a requisição ao Node por HTTP.
+// Confiar no primeiro proxy permite detectar HTTPS e emitir o cookie Secure da sessão.
+app.set('trust proxy', 1);
+
 const port = process.env.PORT || 3000;
 const sessionCookieName = 'rpg.sid';
 
