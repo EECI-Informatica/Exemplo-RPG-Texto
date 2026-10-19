@@ -1,0 +1,19 @@
+{
+  "name": "rpg-texto",
+  "version": "1.0.0",
+  "description": "RPG de texto com cadastro, login e saves no MySQL",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check login.js && node --check cadastro.js && node --check rpg.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "mysql2": "^3.14.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

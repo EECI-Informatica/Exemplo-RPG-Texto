@@ -1,0 +1,271 @@
+/* Regras básicas compartilhadas por todas as páginas. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-page,
+.register-page,
+.rpg-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fundo e componentes da tela de login. */
+.login-page,
+.register-page {
+  background: linear-gradient(135deg, #e0f7fa, #f5f5f5);
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-page h1,
+.register-page h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.login-page h1 {
+  font-size: 2rem;
+}
+
+.login-page form,
+.register-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-page label,
+.register-page label {
+  font-weight: bold;
+  color: #444;
+}
+
+.login-page input,
+.register-page input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-page .error-message {
+  display: none;
+  margin-top: -8px;
+  color: #d93025;
+  font-size: 0.9rem;
+}
+
+.login-page .success-message {
+  color: #188038;
+}
+
+.login-page .buttons,
+.register-page .buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.login-page button,
+.login-page .signup-btn,
+.register-page button,
+.register-page .back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-page .login-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.login-page .login-btn:hover {
+  background: #005ec2;
+}
+
+.login-page .signup-btn,
+.register-page .back-btn {
+  background: #e9ecef;
+  color: #333;
+}
+
+.login-page .signup-btn:hover,
+.register-page .back-btn:hover {
+  background: #dfe3e8;
+}
+
+/* Campos, botão e seta da página de cadastro. */
+.register-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.register-page button {
+  background: #28a745;
+  color: #fff;
+}
+
+.register-page button:hover {
+  background: #1f8f3d;
+}
+
+.register-page .back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  padding: 0;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.register-page .feedback {
+  min-height: 1.25rem;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Layout da janela narrativa, histórico e área de comandos do RPG. */
+.rpg-page {
+  background: linear-gradient(135deg, #1f1f2e, #101820);
+  color: #f5f5f5;
+}
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  width: min(90vw, 900px);
+  height: min(80vh, 700px);
+  overflow: hidden;
+  background: rgba(17, 24, 39, 0.95);
+  border: 2px solid #3b82f6;
+  border-radius: 18px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
+}
+
+.game-header {
+  position: relative;
+  padding: 18px 20px;
+  background: #0f172a;
+  border-bottom: 1px solid #2d3748;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #757474;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+}
+
+.game-output {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #0b1120;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.game-output p {
+  margin: 0 0 12px;
+}
+
+.command-divider {
+  margin: 16px 0;
+  border: 0;
+  border-top: 1px solid #3b475a;
+}
+
+.game-input-area {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px 8px;
+  background: #111827;
+  border-top: 1px solid #2d3748;
+}
+
+.rpg-page input {
+  flex: 1;
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.rpg-page button:not(.logout-btn) {
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.rpg-page button:not(.logout-btn):hover {
+  background: #1d4ed8;
+}
+
+.help-tip {
+  padding: 0 25px 16px;
+  background: #111827;
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  text-align: left;
+}

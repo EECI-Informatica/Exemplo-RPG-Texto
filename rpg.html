@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados e estilos compartilhados das páginas do projeto. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Texto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="rpg-page">
+    <!-- Interface do RPG: cabeçalho, histórico narrativo e entrada de comandos. -->
+    <div class="game-screen">
+      <div class="game-header">
+        RPG de Texto
+        <button class="logout-btn" type="button" aria-label="Fazer logout">×</button>
+      </div>
+
+      <!-- O rpg.js acrescenta aqui a narrativa e os comandos do jogador. -->
+      <div class="game-output" id="gameOutput"></div>
+
+      <div class="game-input-area">
+        <input id="commandInput" type="text" placeholder="Digite sua ação..." />
+        <button id="sendCommand" type="button">Enviar</button>
+      </div>
+      <div class="help-tip">Você pode digitar "ajuda" a qualquer momento para ver as opções disponíveis.</div>
+    </div>
+
+    <!-- Controle da história, das escolhas e dos saves no servidor. -->
+    <script src="rpg.js"></script>
+  </body>
+</html>

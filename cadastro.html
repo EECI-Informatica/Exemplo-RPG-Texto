@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados da página e folha de estilos compartilhada. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="register-page">
+    <!-- Formulário de criação de conta, processado por cadastro.js. -->
+    <div class="register-box">
+      <a href="index.html" class="back-btn" aria-label="Voltar para login">←</a>
+      <h1>Cadastro</h1>
+      <form id="registerForm">
+        <div>
+          <label for="usuario">Usuário</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" minlength="3" maxlength="30" autocomplete="username" required />
+        </div>
+
+        <div>
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" minlength="8" autocomplete="new-password" required />
+        </div>
+
+        <div>
+          <label for="confirmar-senha">Confirmar senha</label>
+          <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" minlength="8" autocomplete="new-password" required />
+        </div>
+
+        <!-- Mensagens de validação e resposta do backend. -->
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+        <div class="buttons">
+          <button type="submit" id="submitButton">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Lógica de validação e envio do cadastro à API. -->
+    <script src="cadastro.js"></script>
+  </body>
+</html>

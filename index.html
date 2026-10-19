@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados da página e estilos compartilhados. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page">
+    <!-- Formulário de autenticação enviado ao backend pelo login.js. -->
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div>
+          <label for="usuario">Usuário</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" autocomplete="username" required />
+        </div>
+
+        <div>
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required />
+        </div>
+
+        <!-- Área acessível para mensagens de erro ou confirmação do cadastro. -->
+        <div id="errorMessage" class="error-message" role="status" aria-live="polite"></div>
+
+        <div class="buttons">
+          <button type="submit" class="login-btn">Login</button>
+          <a href="cadastro.html" class="signup-btn">Cadastre-se</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Lógica de validação e chamada da API de login. -->
+    <script src="login.js"></script>
+  </body>
+</html>
